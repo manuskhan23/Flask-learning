@@ -1,0 +1,11 @@
+make a login page
+accept username & password
+store login data in seccion
+redirect to welcome page with logout feature
+
+##set virtual enviroment
+
+run
+
+python -m venv venv
+venv/Scripts/activate
