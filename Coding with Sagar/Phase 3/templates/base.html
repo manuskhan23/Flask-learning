@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flask-WTF{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        header,footer{
+            background: #333;
+            color: #fff;
+            padding: 10PX;
+            text-align: center;
+        }
+        nav a{
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        main{
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px; 
+        }
+        .message {
+            color: green;
+            padding: 10px;
+            background-color: #d4edda;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <h1>Welcome to my site</h1> -->
+        <h1>Flask-WTF Registration</h1>
+        <nav>
+            <!-- <a href="/feedback">feedback</a> -->
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    <main>
+        {%with messages=get_flashed_messages(with_categories=true)%}
+        {%if messages%}
+        <!-- <ul style="color: green;"> -->
+            <!-- FIX: category first, message second -->
+            {%for category, message in messages%}
+            <p class="{{category}}">{{ message }}</p>
+            {%endfor%}
+        <!-- </ul> -->
+        {%endif%}
+        {%endwith%}
+        {% block content %}{% endblock %}
+    </main>
+    <!-- <footer>
+        &copy; 2026 My Feedback Site
+    </footer> -->
+</body>
+</html>

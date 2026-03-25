@@ -1,0 +1,4 @@
+just a folder to organize your route files (like auth.py, main.py) so your app doesn’t turn into spaghetti
+
+__init__.py=make pakage of folder and collect all routes in one place and Registers Blueprints in the Flask app
+

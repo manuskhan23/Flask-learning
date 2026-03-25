@@ -1,0 +1,3 @@
+models folder will store code of Database Structure
+
+Meaning, all .py the files inside this folder there will be a table definition within them
